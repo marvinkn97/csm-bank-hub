@@ -7,7 +7,6 @@ import tech.csm.entity.Account;
 import tech.csm.util.DBUtil;
 
 public class AccountDaoImpl implements AccountDao {
-
 	@Override
 	public String addAccount(Account account) {
 		   Session session = DBUtil.getSessionFactory().openSession();
@@ -17,7 +16,4 @@ public class AccountDaoImpl implements AccountDao {
 			session.close();
 			return "Account added successfully ";
 	}
-
-
-
 }

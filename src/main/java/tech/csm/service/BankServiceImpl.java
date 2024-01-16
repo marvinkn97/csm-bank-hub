@@ -61,4 +61,26 @@ public class BankServiceImpl implements BankService {
 		return bankVO;
 	}
 
+	@Override
+	public List<BankVO> getAllBanks(int pageNo, int pageSize) {
+		List<Bank> bankList = bankDao.getAllBanks(pageNo, pageSize);
+		List<BankVO> bankVoList = null;
+
+		if (!bankList.isEmpty()) {
+			bankVoList = new ArrayList<>();
+
+			for (Bank bank : bankList) {
+				BankVO bankVO = BankAppUtil.mapEntityToVO(bank);
+				bankVoList.add(bankVO);
+			}
+		}
+
+		return bankVoList;
+	}
+
+	@Override
+	public Long getTableSize() {
+		return bankDao.getTableSize();
+	}
+
 }

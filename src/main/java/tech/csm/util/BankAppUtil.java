@@ -4,9 +4,7 @@ import tech.csm.entity.Bank;
 import tech.csm.entity.BankVO;
 
 public class BankAppUtil {
-	
 	private static int initial = 0;
-
 	public static String generateAccountNumber() {
 		return "BKAC000" + ++initial ;
 	}

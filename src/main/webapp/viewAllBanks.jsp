@@ -22,13 +22,48 @@
 
 	<jsp:include page="/includes/navbar.jsp" />
 
-	<main class="container px-3 px-5 text-center mt-5">
-		<h1 class="display-3">Bank Hub</h1>
-		<p class="lead">Bank Hub - Where Financial Dreams Take Flight!.</p>
-		<p class="lead">
-			<a href="./getAllBanks" class="btn btn-lg btn-primary">View All
-				Banks</a>
-		</p>
+	<main>
+		<div class="container-md px-5">
+			<!-- Table -->
+			<div class="mt-3">
+
+				<h2 class="text-center display-4 mt-3">Available Banks</h2>
+			</div>
+
+			<div class="row p-2">
+				<input class="form-control col-lg-4" type="search"
+					placeholder="Search Bank Name" aria-label="Search" id="searchId"
+					name="bankName">
+				<button class="btn btn-outline-success col-lg-2 ml-2" type="button"
+					onclick="searchBank()">Search</button>
+			</div>
+
+
+
+			<table class="table table-bordered table-striped mt-3">
+				<thead class="thead-dark">
+					<tr>
+						<th>#SNO</th>
+						<th>BANK IFSC CODE</th>
+						<th>BANK NAME</th>
+					</tr>
+				</thead>
+				<tbody id="tbid">
+					<c:forEach items="${bankVOList}" var="bank" varStatus="counter">
+						<tr>
+							<td>${counter.count}</td>
+							<td>${bank.ifscCode}</td>
+							<td>${bank.bankName}</td>
+						</tr>
+					</c:forEach>
+				</tbody>
+			</table>
+			<div>
+			<c:forEach items="${pageList}" var="pn">
+					<a class="btn btn-success" href="./getAllBanks?pageNo=${pn-1}">${pn}</a>
+				</c:forEach>
+			</div>
+		</div>
 
 	</main>
 

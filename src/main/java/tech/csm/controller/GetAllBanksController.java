@@ -1,6 +1,7 @@
 package tech.csm.controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.servlet.ServletException;
@@ -28,30 +29,36 @@ public class GetAllBanksController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		resp.setContentType("text/html");
-		List<BankVO> bankVOList = bankService.getAllBanks();
-
-		String response = "";
 		
-	
-		   // Retrieve the session from the request, create a new one if it doesn't exist
-	    HttpSession session = req.getSession(true);
-
-	    // Retrieve the initial value from the session, or set it to 1 if not present
-	    Integer initial = (Integer) session.getAttribute("initial");
-	    if (initial == null) {
-	        initial = 1;
-	        session.setAttribute("initial", initial);
-	    }
-
-		for (BankVO bankVO : bankVOList) {
-
-			response += "<tr>" + "<td>" + initial++ + "</td>" + // Serial number
-					"<td>" + bankVO.getIfscCode() + "</td>" + "<td>" + bankVO.getBankName() + "</td>" + "</tr>";
+		int pageSize = 5;
+		int pageNo = 0;
+		
+		if(req.getParameter("pageNo") != null) {
+			pageNo = Integer.parseInt(req.getParameter("pageNo"));
 		}
 		
+		Long numberOfRecords = bankService.getTableSize();
+		
+		List<Integer> pageList = new ArrayList<>();
+		
+		
+		for(int i=0, j=1; i< numberOfRecords; i+=pageSize, j++) {
+			pageList.add(j);
+		}
+		
+		
+		System.out.println("pageSize"+pageSize+"  "+"pageNo="+pageNo);
+		req.setAttribute("pageList", pageList);
+		
+		List<BankVO> bankVOList = bankService.getAllBanks(pageNo, pageSize);
+		
+		req.setAttribute("bankVOList", bankVOList);
+		
+		String response = "";
+			
 		System.out.println(response);
 
-		resp.getWriter().println(response);
+		req.getRequestDispatcher("viewAllBanks.jsp").forward(req, resp);
 	}
 
 }

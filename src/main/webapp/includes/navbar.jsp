@@ -19,6 +19,8 @@
 					<li class="nav-item active"><a class="nav-link"
 						href="getBankForm">Create Bank <span class="sr-only">(current)</span></a>
 					</li>
+					<li class="nav-item"><a class="nav-link" href="getAllBanks">View
+							All Banks </a></li>
 					<li class="nav-item"><a class="nav-link" href="getAccountForm">Create
 							Account</a></li>
 					<li class="nav-item"><a class="nav-link"
