@@ -8,7 +8,9 @@ import lombok.Setter;
 public class AccountVO {
 	private String accountNo;
 	private String name;
+	private String email;
 	private String phoneNo;
 	private String accountType;
 	private BankVO bankVO;
+	private String balance;
 }

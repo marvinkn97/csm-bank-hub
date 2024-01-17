@@ -76,4 +76,18 @@ public class BankDaoImpl implements BankDao {
 		return noOfRows;
 	}
 
+	@Override
+	public Bank getBankById(int bankId) {
+		Session session = DBUtil.getSessionFactory().openSession();
+		final String hql = "SELECT b FROM Bank b WHERE b.bankId = :bid";
+
+		Query<Bank> query = session.createQuery(hql);
+		query.setParameter("bid", bankId);
+
+		Bank bank = query.uniqueResult();
+
+		session.close();
+		return bank;
+	}
+
 }

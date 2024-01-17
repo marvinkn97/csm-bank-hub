@@ -48,7 +48,37 @@
 		<servlet-name>GetAllBanks</servlet-name>
 		<url-pattern>/getAllBanks</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>GetAllBanksWithoutPagination</servlet-name>
+		<servlet-class>tech.csm.controller.GetAllBanksWithoutPagination</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GetAllBanksWithoutPagination</servlet-name>
+		<url-pattern>/getAllBanksWP</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>GetAccountForm</servlet-name>
+		<servlet-class>tech.csm.controller.GetAccountForm</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetAccountForm</servlet-name>
+		<url-pattern>/getAccountForm</url-pattern>
+	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>GetAccount</servlet-name>
+		<servlet-class>tech.csm.controller.CreateAccountController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetAccount</servlet-name>
+		<url-pattern>/createAccount</url-pattern>
+	</servlet-mapping>
+
+
 	<servlet>
 		<servlet-name>GetBankByName</servlet-name>
 		<servlet-class>tech.csm.controller.GetBankByNameController</servlet-class>

@@ -10,4 +10,5 @@ public interface BankDao {
 	List<Bank> getAllBanks(int pageNo, int pageSize);
 	Long getTableSize();
 	Bank getBankByName(String name);
+	Bank getBankById(int bankId);
 }

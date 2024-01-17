@@ -24,6 +24,8 @@ public class Account {
 	
 	private String name;
 	
+	private String email;
+	
 	@Column(name = "phone_no")
 	private String phoneNo;
 	

@@ -60,7 +60,7 @@
 			</table>
 			<div>
 			<c:forEach items="${pageList}" var="pn">
-					<a class="btn btn-success" href="./getAllBanks?pageNo=${pn-1}">${pn}</a>
+					<a class="btn btn-success" href="./getAllBanks?pageNo=${pn}">${pn+1}</a>
 				</c:forEach>
 			</div>
 		</div>
@@ -84,7 +84,6 @@
 				success : function(data) {
 					// Assuming 'data' is HTML content, use .html() to set it inside the element with id 'tbid'
 					$('#tbid').html(data);
-					$()
 				},
 				error : function(xhr, status, error) {
 					console.error('Error fetching data:', status, error);

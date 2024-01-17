@@ -42,7 +42,7 @@ public class GetAllBanksController extends HttpServlet {
 		List<Integer> pageList = new ArrayList<>();
 		
 		
-		for(int i=0, j=1; i< numberOfRecords; i+=pageSize, j++) {
+		for(int i=0, j=0; i< numberOfRecords; i+=pageSize, j++) {
 			pageList.add(j);
 		}
 		

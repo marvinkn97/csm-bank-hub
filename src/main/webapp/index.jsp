@@ -34,28 +34,5 @@
 
 	<jsp:include page="/includes/footer.jsp" />
 
-	<script>
-		function searchBank() {
-			let bankSearchName = $("#searchId").val();
-			//alert(bankSearchName);
-
-			// Make an AJAX request to fetch data
-			$.ajax({
-				type : 'GET',
-				url : 'getBankByName', // Replace with the actual API endpoint
-				data : {
-					bankName : bankSearchName
-				},
-				success : function(data) {
-					// Assuming 'data' is HTML content, use .html() to set it inside the element with id 'tbid'
-					$('#tbid').html(data);
-					$()
-				},
-				error : function(xhr, status, error) {
-					console.error('Error fetching data:', status, error);
-				}
-			});
-		}
-	</script>
 </body>
 </html>

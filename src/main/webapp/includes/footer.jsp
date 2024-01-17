@@ -5,7 +5,7 @@
 </head>
 <body>
 
-<footer class="footer fixed-bottom py-2 text-center">
+<footer class="footer py-4 text-center">
   <div class="container">
     <span class="text-muted">JSP + Servlets + Hibernate + MySQL | Made By Marvin ❤️</span>
   </div>

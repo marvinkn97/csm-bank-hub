@@ -14,6 +14,6 @@ public class AccountDaoImpl implements AccountDao {
 		   session.persist(account);
 		   transaction.commit();
 			session.close();
-			return "Account added successfully ";
+			return "Account added successfully";
 	}
 }
