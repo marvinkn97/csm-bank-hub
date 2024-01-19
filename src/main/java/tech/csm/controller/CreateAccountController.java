@@ -1,6 +1,7 @@
 package tech.csm.controller;
 
 import java.io.IOException;
+import java.util.Enumeration;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
@@ -31,12 +32,24 @@ public class CreateAccountController extends HttpServlet {
     
     
 	@Override
-	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {	
+		
+		Enumeration<String> parameterNames = req.getParameterNames();
+		while (parameterNames.hasMoreElements()) {
+		    String paramName = parameterNames.nextElement();
+		    System.out.println(paramName + ": " + req.getParameter(paramName));
+		}
+		
+		
 		String accountName = req.getParameter("accName");
 		String phoneNumber = req.getParameter("phoneNo");
 		String email = req.getParameter("email");
 		String bankId = req.getParameter("bankId");
-		String accountType = req.getParameter("accType");
+		String accountType = req.getParameter("accountType");
+		
+		
+		
+//		System.out.println(accountName + " " + phoneNumber + " " + email + " " + bankId + " " + accountType);
 
 		AccountVO accountVO = new AccountVO();
 		accountVO.setName(accountName);
@@ -50,10 +63,12 @@ public class CreateAccountController extends HttpServlet {
 		
 		accountVO.setAccountType(accountType);
 		
+//		System.out.println(accountVO);
+		
 		String msg = accountService.addAccount(accountVO);
 		System.out.println(msg);
 		
-//		resp.sendRedirect("./");
+		resp.sendRedirect("./");
 	}
 	
 	@Override

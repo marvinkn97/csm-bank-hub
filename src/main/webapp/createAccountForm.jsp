@@ -63,7 +63,7 @@
 									class="form-control" name="bankId" id="bankNameId">
 									<option value="0">--select--</option>
 									<c:forEach items="${bankVOList}" var="b">
-										<option value='${b.bankId}'>${b.bankName}</option>
+										<option value="${b.bankId}">${b.bankName}</option>
 									</c:forEach>
 								</select>
 							</div>

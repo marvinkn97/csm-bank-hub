@@ -29,7 +29,7 @@ public class AccountServiceImpl implements AccountService {
 		if (accountVO != null) {
 			account = new Account();
 
-			account.setAccountType(BankAppUtil.generateAccountNumber());
+			account.setAccountNo(BankAppUtil.generateAccountNumber());
 			account.setName(accountVO.getName());
 			account.setEmail(accountVO.getEmail());
 			account.setPhoneNo(accountVO.getPhoneNo());

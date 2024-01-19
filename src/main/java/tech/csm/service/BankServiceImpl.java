@@ -42,6 +42,7 @@ public class BankServiceImpl implements BankService {
 			bankVoList = new ArrayList<>();
 
 			for (Bank bank : bankList) {
+				System.out.println(bank);
 				BankVO bankVO = BankAppUtil.mapEntityToVO(bank);
 				bankVoList.add(bankVO);
 			}
