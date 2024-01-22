@@ -30,10 +30,10 @@
 						role="button" data-toggle="dropdown" aria-haspopup="true"
 						aria-expanded="false"> Reports </a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-							<a class="dropdown-item" href="#">Check Account Balance</a> <a
-								class="dropdown-item" href="#">Mini Statement</a>
+							<a class="dropdown-item" href="getbalance">Check Account Balance</a> <a
+								class="dropdown-item" href="getministmt">Mini Statement</a>
 							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="#">Full Statement</a>
+							<a class="dropdown-item" href="getstmt">Full Statement</a>
 						</div>
 				</ul>
 			</div>

@@ -46,7 +46,7 @@ public class TransactionServiceImpl implements TransactionService {
 				Double newAccountBal = account.getBalance()  - amount;
 				account.setBalance(newAccountBal);
 				transactionType = transactionVO.getTransactionType().charAt(0);
-				response = "Withraw complete";
+				response = "Withdraw complete";
 			}
 			
 		}	
