@@ -18,7 +18,7 @@ public class BankDaoImpl implements BankDao {
 		session.persist(bank);
 		transaction.commit();
 		session.close();
-		return "Bank added successfully ";
+		return "Bank added successfully";
 	}
 
 	@Override

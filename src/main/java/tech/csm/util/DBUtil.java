@@ -20,5 +20,4 @@ public class DBUtil {
     public static SessionFactory getSessionFactory() {
         return sessionFactory;
     }
-
 }

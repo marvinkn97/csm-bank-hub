@@ -88,4 +88,25 @@
 		<servlet-name>GetBankByName</servlet-name>
 		<url-pattern>/getBankByName</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>MakeTransaction</servlet-name>
+		<servlet-class>tech.csm.controller.TransactionController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MakeTransaction</servlet-name>
+		<url-pattern>/makeTransaction</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>GetpaymentForm</servlet-name>
+		<servlet-class>tech.csm.controller.GetPaymentForm</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GetpaymentForm</servlet-name>
+		<url-pattern>/getpaymentForm</url-pattern>
+	</servlet-mapping>
+
 </web-app>

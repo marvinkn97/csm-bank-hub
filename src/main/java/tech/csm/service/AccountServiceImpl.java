@@ -48,4 +48,13 @@ public class AccountServiceImpl implements AccountService {
 		return response;
 	}
 
+	@Override
+	public AccountVO getAccountByAccountNo(String accountNo) {
+		Account account = accountDao.getAccountByAccountNo(accountNo);
+		
+		AccountVO accountVO = BankAppUtil.mapEntityToVO(account);
+		
+		return accountVO;
+	}
+
 }

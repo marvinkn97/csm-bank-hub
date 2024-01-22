@@ -17,7 +17,7 @@ public class CreateBankController extends HttpServlet {
 	 */
 	private static final long serialVersionUID = 8001585494704422725L;
 
-	private BankService bankService;
+	private final BankService bankService;
 
 	public CreateBankController() {
 		this.bankService = new BankServiceImpl();

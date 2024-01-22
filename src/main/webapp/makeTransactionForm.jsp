@@ -30,18 +30,18 @@
 				<div class="card-header">Transaction Form</div>
 				<div class="card-body">
 
-					<form action="./createBank" method="post">
+					<form action="./makeTransaction" method="post">
 						<div class="row">
 
 							<div class="form-group col-md-4">
-								<label for="">Account Number</label> <input type="text"
-									class="form-control" id="" name=""
+								<label for="accNumberId">Account Number</label> <input type="text"
+									class="form-control" id="accNumberId" name="accNumber"
 									placeholder="Enter Account Number" required="required">
 							</div>
 							
 							<div class="form-group col-md-4">
-									<label for="">Transaction Type</label> <select
-										class="form-control" name="" id="" onchange="">
+									<label for="transactionId">Transaction Type</label> <select
+										class="form-control" name="transactionType" id="transactionId">
 										<option value="0">--select--</option>
 										<option value="Credit">Deposit</option>
 										<option value="Debit">Withdraw</option>
@@ -50,8 +50,8 @@
 							
 
 							<div class="form-group col-md-4">
-								<label for="">Amount</label> <input type="text"
-									class="form-control" id="" name=""
+								<label for="amountId">Amount</label> <input type="text"
+									class="form-control" id="amountId" name="amount"
 									placeholder="Enter Transaction Amount">
 							</div>
 
