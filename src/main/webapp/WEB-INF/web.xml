@@ -68,7 +68,7 @@
 		<servlet-name>GetAccountForm</servlet-name>
 		<url-pattern>/getAccountForm</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>GetAccount</servlet-name>
 		<servlet-class>tech.csm.controller.CreateAccountController</servlet-class>
@@ -88,7 +88,7 @@
 		<servlet-name>GetBankByName</servlet-name>
 		<url-pattern>/getBankByName</url-pattern>
 	</servlet-mapping>
-	
+
 	<servlet>
 		<servlet-name>MakeTransaction</servlet-name>
 		<servlet-class>tech.csm.controller.TransactionController</servlet-class>
@@ -98,8 +98,8 @@
 		<servlet-name>MakeTransaction</servlet-name>
 		<url-pattern>/makeTransaction</url-pattern>
 	</servlet-mapping>
-	
-		<servlet>
+
+	<servlet>
 		<servlet-name>GetpaymentForm</servlet-name>
 		<servlet-class>tech.csm.controller.GetPaymentForm</servlet-class>
 	</servlet>
@@ -108,5 +108,29 @@
 		<servlet-name>GetpaymentForm</servlet-name>
 		<url-pattern>/getpaymentForm</url-pattern>
 	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>CheckBalance</servlet-name>
+		<servlet-class>tech.csm.controller.CheckBalanceForm</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>CheckBalance</servlet-name>
+		<url-pattern>/getbalance</url-pattern>
+	</servlet-mapping>
+
+
+
+	<servlet>
+		<servlet-name>GetAccountByAccNo</servlet-name>
+		<servlet-class>tech.csm.controller.CheckBalanceController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GetAccountByAccNo</servlet-name>
+		<url-pattern>/getAccountByAccNo</url-pattern>
+	</servlet-mapping>
+
+
 
 </web-app>

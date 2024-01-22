@@ -36,7 +36,11 @@ public class MainController extends HttpServlet {
             case "/getTransactionForm":
                 req.getRequestDispatcher("/getpaymentForm").forward(req, resp);
                 break;
+            case "/getbalance":
+                req.getRequestDispatcher("/getbalance").forward(req, resp);
+                break;
         }
+        
 	}
 
 	@Override

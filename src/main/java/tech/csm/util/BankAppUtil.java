@@ -22,7 +22,7 @@ public class BankAppUtil {
 	public static AccountVO mapEntityToVO(Account account) {
 		
 		 AccountVO accountVO = new AccountVO();
-		 accountVO.setAccountType(account.getAccountType());
+		 accountVO.setAccountType(account.getAccountType().toLowerCase());
 		 accountVO.setBalance(account.getBalance().toString());
 		 accountVO.setBankVO(mapEntityToVO(account.getBank()));
 		 accountVO.setName(account.getName());
