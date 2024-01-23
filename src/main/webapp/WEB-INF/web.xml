@@ -120,7 +120,6 @@
 	</servlet-mapping>
 
 
-
 	<servlet>
 		<servlet-name>GetAccountByAccNo</servlet-name>
 		<servlet-class>tech.csm.controller.CheckBalanceController</servlet-class>
@@ -129,6 +128,27 @@
 	<servlet-mapping>
 		<servlet-name>GetAccountByAccNo</servlet-name>
 		<url-pattern>/getAccountByAccNo</url-pattern>
+	</servlet-mapping>
+	
+	
+	<servlet>
+		<servlet-name>GetMiniStatement</servlet-name>
+		<servlet-class>tech.csm.controller.GetMiniStatement</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>GetMiniStatement</servlet-name>
+		<url-pattern>/getministmt</url-pattern>
+	</servlet-mapping>
+	
+		<servlet>
+		<servlet-name>MiniStatement</servlet-name>
+		<servlet-class>tech.csm.controller.MiniStatementController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MiniStatement</servlet-name>
+		<url-pattern>/ministmt</url-pattern>
 	</servlet-mapping>
 
 
