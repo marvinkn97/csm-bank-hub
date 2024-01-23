@@ -42,6 +42,9 @@ public class MainController extends HttpServlet {
             case "/getministmt":
                 req.getRequestDispatcher("/getministmt").forward(req, resp);
                 break;
+            case "/getfullstmt":
+                req.getRequestDispatcher("/getfullstmt").forward(req, resp);
+                break;
         }
       
 	}

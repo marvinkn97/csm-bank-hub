@@ -33,7 +33,7 @@
 							<a class="dropdown-item" href="getbalance">Check Account Balance</a> <a
 								class="dropdown-item" href="getministmt">Mini Statement</a>
 							<div class="dropdown-divider"></div>
-							<a class="dropdown-item" href="getstmt">Full Statement</a>
+							<a class="dropdown-item" href="getfullstmt">Full Statement</a>
 						</div>
 				</ul>
 			</div>

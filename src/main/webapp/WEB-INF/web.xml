@@ -142,14 +142,26 @@
 	</servlet-mapping>
 	
 		<servlet>
-		<servlet-name>MiniStatement</servlet-name>
-		<servlet-class>tech.csm.controller.MiniStatementController</servlet-class>
+		<servlet-name>GetFullStatement</servlet-name>
+		<servlet-class>tech.csm.controller.GetFullStatement</servlet-class>
 	</servlet>
 
 	<servlet-mapping>
-		<servlet-name>MiniStatement</servlet-name>
-		<url-pattern>/ministmt</url-pattern>
+		<servlet-name>GetFullStatement</servlet-name>
+		<url-pattern>/getfullstmt</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>FullStatement</servlet-name>
+		<servlet-class>tech.csm.controller.FullStatementController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>FullStatement</servlet-name>
+		<url-pattern>/fullstmt</url-pattern>
+	</servlet-mapping>
+	
+	
 
 
 

@@ -21,10 +21,7 @@ public class CheckBalanceController extends HttpServlet {
 	private static final long serialVersionUID = 2647853232481675846L;
 	
 	private final AccountService accountService;
-	
-	
-	
-	
+
 	public CheckBalanceController() {
 		super();
 		this.accountService = new AccountServiceImpl();
